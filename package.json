@@ -8,10 +8,10 @@
     "theme",
     "dark",
     "contrast",
+    "vivid",
     "grepping",
     "sexy",
-    "mesa",
-    "easy"
+    "mesa"
   ],
   "repository": "https://github.com/aebarber/mesa-syntax",
   "license": "MIT",
