@@ -2,12 +2,18 @@
   "name": "mesa-syntax",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "description": "A dark atom syntax theme with a focus on visual grepping and sexiness.",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "dark",
+    "contrast",
+    "grepping",
+    "sexy",
+    "mesa",
+    "easy"
   ],
-  "repository": "https://github.com/atom/mesa-syntax",
+  "repository": "https://github.com/aebarber/mesa-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -55,14 +55,14 @@ atom-text-editor {
 // Syntax styles
 
 .syntax--comment {
-  color: @light-gray;
+  color: @comment;
 }
 
 .syntax--keyword {
-  color: @purple;
+  color: @keyword;
 
   &.syntax--control {
-    color: @purple;
+    color: @control;
   }
 
   &.syntax--operator {
@@ -79,7 +79,9 @@ atom-text-editor {
 }
 
 .syntax--storage {
-  color: @purple;
+  color: @storage;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .syntax--constant {
@@ -120,8 +122,9 @@ atom-text-editor {
 }
 
 .syntax--string {
-  color: @green;
-
+  color: @string;
+  font-style: italic;
+  font-weight: lighter;
 
   &.syntax--regexp {
     color: @cyan;
@@ -173,7 +176,7 @@ atom-text-editor {
 
 .syntax--support {
   &.syntax--class {
-    color: @light-orange;
+    color: @class;
   }
 
   &.syntax--function  {
@@ -190,15 +193,15 @@ atom-text-editor {
     color: @blue;
   }
   &.syntax--name.syntax--type {
-    color: @light-orange;
+    color: @class;
     text-decoration: underline;
   }
 
   &.syntax--other.syntax--inherited-class {
-    color: @green;
+    color: @class;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
-    color: @light-orange;
+    color: @class;
   }
 
   &.syntax--name.syntax--section {
@@ -221,7 +224,7 @@ atom-text-editor {
 
 .syntax--meta {
   &.syntax--class {
-    color: @light-orange;
+    color: @class;
   }
 
   &.syntax--link {
