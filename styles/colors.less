@@ -28,6 +28,7 @@
 @high-priority: #ffffff;
 @found-marker: lighten(@selection-background, 10%);
 @found-marker-active: lighten(@found-marker, 10%);
+@line-folding: #fa00ff;
 
 // diff components
 @renamed: #3857d7;
@@ -35,11 +36,32 @@
 @modified: #dad800;
 @removed: #bb1717;
 
-// code components
+// code low-priority components
+// generally low-contrast, low saturation
 @text-default: #eeeeee;
 @comment: #626262;
-@keyword: #c37af6;
-@control: #4b83cd;
-@storage: #50cc95;
-@string: #c4b773;
-@class: #ff5e3b;
+
+// code type components
+// cool colors, medium contrast, medium saturation
+@storage: #3a986e;
+
+// code data components
+// warm colors, medium contrast, high saturation
+@variable: #ff88d3;
+
+// code class/function components
+// warm colors, high contrast, high saturation
+@class: #f2f034;
+@class-inherited: darken(@class, 15%);
+@function: #ffb424;
+
+// code literal components
+// warm colors, medium-low contrast, medium-low saturation
+@string: #eb6e6e;
+@literal: #ffffff;
+
+// code syntax components
+// cool colors, high
+@keyword: #24ff00;
+@control: #c37af6;
+@punctuation: #6cbebe;

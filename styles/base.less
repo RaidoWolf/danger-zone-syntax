@@ -19,6 +19,7 @@ atom-text-editor {
   .gutter {
     background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
+    margin-right: 5px;
 
     .line-number {
       &.cursor-line {
@@ -35,7 +36,9 @@ atom-text-editor {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    opacity: 1;
+    color: @line-folding;
+    font-weight: bold;
   }
 
   .invisible {
@@ -56,6 +59,7 @@ atom-text-editor {
 
 .syntax--comment {
   color: @comment;
+  font-weight: lighter;
 }
 
 .syntax--keyword {
@@ -70,7 +74,7 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--special-method {
-    color: @blue;
+    color: @function;
   }
 
   &.syntax--other.syntax--unit {
@@ -105,10 +109,10 @@ atom-text-editor {
 }
 
 .syntax--variable {
-  color: @red;
+  color: @variable;
 
   &.syntax--interpolation {
-    color: darken(@red, 10%);
+    color: @syntax-text-color;
   }
 
   &.syntax--parameter.syntax--function {
@@ -142,14 +146,16 @@ atom-text-editor {
 .syntax--punctuation {
   &.syntax--definition {
     &.syntax--comment {
-      color: @light-gray;
+      color: @comment;
+      font-weight: lighter;
     }
 
     &.syntax--string,
     &.syntax--variable,
     &.syntax--parameters,
     &.syntax--array {
-      color: @syntax-text-color;
+      color: @punctuation;
+      font-weight: bold;
     }
 
     &.syntax--heading,
@@ -180,25 +186,30 @@ atom-text-editor {
   }
 
   &.syntax--function  {
-    color: @cyan;
+    color: @function;
 
     &.syntax--any-method {
-      color: @blue;
+      color: @function;
     }
   }
 }
 
 .syntax--entity {
   &.syntax--name.syntax--function {
-    color: @blue;
+    color: @function;
   }
   &.syntax--name.syntax--type {
     color: @class;
     text-decoration: underline;
+    &.syntax--inherited {
+        color: @class-inherited;
+        text-decoration: none;
+        font-style: italic;
+    }
   }
 
   &.syntax--other.syntax--inherited-class {
-    color: @class;
+    color: @class-inherited;
   }
   &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     color: @class;
